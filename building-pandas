@@ -12,7 +12,14 @@ Next task:
 RUN cd /usr/local/src && git clone https://github.com/scikit-learn/scikit-learn.git && \
     cd scikit-learn && python setup.py build && python setup.py install && \
     
-    
+PS C:\Users\Test> docker ps
+CONTAINER ID        IMAGE                                            COMMAND                  CREATED             STATUS              PORTS                    NAMES
+c57b63a2b99f        tensorflow/tensorflow:2.0.0-py3-jupyter-pandas   "bash -c 'source /et…"   18 minutes ago      Up 18 minutes       0.0.0.0:8888->8888/tcp   tensorflow2
+PS C:\Users\Test> docker images
+REPOSITORY              TAG                        IMAGE ID            CREATED             SIZE
+tensorflow/tensorflow   2.0.0-py3-jupyter-pandas   45e4fdf5d577        29 minutes ago      1.28GB
+tensorflow/tensorflow   2.0.0-py3-jupyter          c652a4fc8a4f        3 days ago          1.22GB
+PS C:\Users\Test>    
     ---------------------------------------
 
 PS C:\Users\Test> cd .\Dockerfile\
