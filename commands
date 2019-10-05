@@ -1,0 +1,63 @@
+tensorflow / tensorflow : 2.0.0rc0-py3-jupyter
+
+docker pull tensorflow/tensorflow:2.0.0-py3-jupyter
+
+Working
+
+docker run -it -p 8888:8888 -v "c:/users/test/google drive/dlbook:/tf" --rm --name tensorflow2 tensorflow/tensorflow:2.0.0-py3-jupyter-pandas 
+
+docker run -it -p 8888:8888 -v "c:/users/test/google drive:/tf" --rm --name tensorflow2 tensorflow/tensorflow:2.0.0-py3-jupyter-pandas 
+
+docker run -it -p 8888:8888 -v "c:/users/test/google drive:/tf" --rm --name tensorflow2 tensorflow/tensorflow:2.0.0-py3-jupyter
+
+docker run -it -p 8888:8888 -v "c:/users/test/google drive/dlbook:/tf" --rm tensorflow/tensorflow:2.0.0-py3-jupyter --restart unless-stopped
+
+docker run -it -p 8888:8888 -v "c:/users/test/google drive/dlbook:/tf" tensorflow/tensorflow:2.0.0-py3-jupyter
+
+
+docker run -it -p 8888:8888 -v e:/posts:/tf --rm tensorflow/tensorflow:2.0.0-py3-jupyter
+
+docker run -it -p 8888:8888 -v ${PWD}:/tf --rm tensorflow/tensorflow:2.0.0-py3-jupyter
+
+-v ${PWD}
+
+docker run -it -p 8888:8888 -v C:/Users/Test/Google Drive/DLbook:/tf --rm tensorflow/tensorflow:2.0.0-py3-jupyter
+
+"C:\Users\Test\Google Drive\DLbook"
+
+docker run -it -p 8888:8888 -v e:/posts:/tf --rm tensorflow/tensorflow:2.0.0-py3-jupyter
+
+docker run -it -p 8888:8888 tensorflow/tensorflow:2.0.0-py3-jupyter
+
+docker run -it -p 8888:8888 tensorflow/tensorflow:2.0.0rc0-py3-jupyter
+
+docker run -it -p 8888:8888 -v C:\Users\Mr. raqueeb\Documents:/tmp --rm --name tensorflow2 tensorflow/tensorflow:2.0.0rc0-py3-jupyter
+
+docker run -it -p 8888:8888 -v C:\ProgramData\Docker:/tmp --rm --name tensorflow2 tensorflow/tensorflow:2.0.0rc0-py3-jupyter
+
+docker run -it -p 8888:8888 -v C:\ProgramData\Docker:/notebook --rm --name tensorflow2 tensorflow/tensorflow:2.0.0rc0-py3-jupyter
+
+docker run -it p 8888:8888 --volume //e/posts:/tf -rm --name tensorflow2 tensorflow/tensorflow:2.0.0-py3-jupyter
+
+docker create -t -i -v i:/project/web01:/mnt/test fedora /bin/bash
+
+docker run -it p 8888:8888 -v e:/posts:/tf -rm --name tensorflow2 tensorflow/tensorflow:2.0.0-py3-jupyter
+
+C:\ProgramData\Docker
+
+docker pull tensorflow/tensorflow:latest-gpu-jupyter
+
+docker container ls -a
+
+docker container rm 7f6a0963b4fc
+
+docker container stop $(docker container ls -aq)
+
+docker run -it tensorflow/tensorflow:2.0.0-py3-jupyter /bin/bash
+pip install pandas
+
+docker export --output="tensorflow.tar" fc8da732849a
+
+docker run tensorflow/tensorflow:2.0.0-py3-jupyter bash -c "apt-get update && apt-get install -y pandas"
+
+
