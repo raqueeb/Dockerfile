@@ -6,6 +6,15 @@ RUN apt-get update && pip3 install pandas
 
 -------------------------------
 
+Next task:
+
+# Scikit-Learn nightly build
+RUN cd /usr/local/src && git clone https://github.com/scikit-learn/scikit-learn.git && \
+    cd scikit-learn && python setup.py build && python setup.py install && \
+    
+    
+    ---------------------------------------
+
 PS C:\Users\Test> cd .\Dockerfile\
 PS C:\Users\Test\Dockerfile> docker build -t tensorflow/tensorflow:2.0.0-py3-jupyter-pandas .
 Sending build context to Docker daemon  2.048kB
