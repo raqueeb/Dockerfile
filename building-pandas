@@ -1,0 +1,40 @@
+Dockerfile
+
+FROM tensorflow/tensorflow:2.0.0-py3-jupyter
+
+RUN apt-get update && pip3 install pandas
+
+-------------------------------
+
+PS C:\Users\Test> cd .\Dockerfile\
+PS C:\Users\Test\Dockerfile> docker build -t tensorflow/tensorflow:2.0.0-py3-jupyter-pandas .
+Sending build context to Docker daemon  2.048kB
+Step 1/2 : FROM tensorflow/tensorflow:2.0.0-py3-jupyter
+ ---> c652a4fc8a4f
+Step 2/2 : RUN apt-get update && pip3 install pandas
+ ---> Running in c8fd4c855a1b
+Hit:1 http://archive.ubuntu.com/ubuntu bionic InRelease
+Get:2 http://security.ubuntu.com/ubuntu bionic-security InRelease [88.7 kB]
+Get:3 http://archive.ubuntu.com/ubuntu bionic-updates InRelease [88.7 kB]
+Get:4 http://security.ubuntu.com/ubuntu bionic-security/universe amd64 Packages [772 kB]
+Get:5 http://archive.ubuntu.com/ubuntu bionic-backports InRelease [74.6 kB]
+Get:6 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 Packages [971 kB]
+Get:7 http://archive.ubuntu.com/ubuntu bionic-updates/universe amd64 Packages [1292 kB]
+Get:8 http://security.ubuntu.com/ubuntu bionic-security/main amd64 Packages [674 kB]
+Fetched 3961 kB in 32s (122 kB/s)
+Reading package lists...
+Collecting pandas
+  Downloading https://files.pythonhosted.org/packages/73/9b/52e228545d14f14bb2a1622e225f38463c8726645165e1cb7dde95bfe6d4/pandas-0.25.1-cp36-cp36m-manylinux1_x86_64.whl (10.5MB)
+Collecting pytz>=2017.2 (from pandas)
+  Downloading https://files.pythonhosted.org/packages/87/76/46d697698a143e05f77bec5a526bf4e56a0be61d63425b68f4ba553b51f2/pytz-2019.2-py2.py3-none-any.whl (508kB)
+Requirement already satisfied: python-dateutil>=2.6.1 in /usr/local/lib/python3.6/dist-packages (from pandas) (2.8.0)
+Requirement already satisfied: numpy>=1.13.3 in /usr/local/lib/python3.6/dist-packages (from pandas) (1.17.2)
+Requirement already satisfied: six>=1.5 in /usr/lib/python3/dist-packages (from python-dateutil>=2.6.1->pandas) (1.11.0)
+Installing collected packages: pytz, pandas
+Successfully installed pandas-0.25.1 pytz-2019.2
+Removing intermediate container c8fd4c855a1b
+ ---> 45e4fdf5d577
+Successfully built 45e4fdf5d577
+Successfully tagged tensorflow/tensorflow:2.0.0-py3-jupyter-pandas
+SECURITY WARNING: You are building a Docker image from Windows against a non-Windows Docker host. All files and directories added to build context will have '-rwxr-xr-x' permissions. It is recommended to double check and reset permissions for sensitive files and directories.
+PS C:\Users\Test\Dockerfile>
